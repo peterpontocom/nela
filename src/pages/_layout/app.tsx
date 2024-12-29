@@ -1,4 +1,5 @@
 import { AppSidebar } from "@/components/sidebar/app-sidebar";
+import { TabBar } from "@/components/tab-bar/tab-bar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { Outlet } from "react-router-dom";
 
@@ -9,6 +10,7 @@ export function AppLayout() {
       <main>
         <Outlet />
       </main>
+      <TabBar />
     </SidebarProvider>
   );
 }
