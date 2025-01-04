@@ -1,16 +1,20 @@
-import { AppSidebar } from "@/components/sidebar/app-sidebar";
 import { TabBar } from "@/components/mobile/tab-bar/tab-bar";
+import { AppSidebarLeft } from "@/components/sidebar/app-sidebar-left";
+import { AppSidebarRight } from "@/components/sidebar/app-sidebar-right";
 import { SidebarProvider } from "@/components/ui/sidebar";
+import { Toaster } from "@/components/ui/sonner";
 import { Outlet } from "react-router-dom";
 
 export function AppLayout() {
   return (
     <SidebarProvider>
-      <AppSidebar />
-      <main className="w-full">
+      <AppSidebarLeft />
+      <main className="w-full p-4 md:p-6 lg:p-8">
         <Outlet />
       </main>
+      <AppSidebarRight />
       <TabBar />
+      <Toaster richColors />
     </SidebarProvider>
   );
 }
