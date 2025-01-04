@@ -1,5 +1,3 @@
-import { Home, CreditCard, Star, Store, Settings } from "lucide-react";
-
 import {
   Sidebar,
   SidebarContent,
@@ -11,37 +9,11 @@ import {
   SidebarMenuItem,
   SidebarSeparator,
 } from "@/components/ui/sidebar";
+import { NavItems } from "@/routes";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 // Menu items.
-const items = [
-  {
-    title: "Home",
-    url: "/",
-    icon: Home,
-  },
-  {
-    title: "Cartão",
-    url: "/nela-card",
-    icon: CreditCard,
-  },
-  {
-    title: "Favoritos",
-    url: "/favorites",
-    icon: Star,
-  },
-  {
-    title: "Loja",
-    url: "/store",
-    icon: Store,
-  },
-  {
-    title: "Configurações",
-    url: "/settings",
-    icon: Settings,
-  },
-];
 
 export function AppSidebarLeft() {
   const location = useLocation();
@@ -62,7 +34,7 @@ export function AppSidebarLeft() {
           <SidebarGroup>
             <SidebarGroupContent>
               <SidebarMenu>
-                {items.map((item) => (
+                {NavItems.map((item) => (
                   <SidebarMenuItem key={item.title}>
                     <SidebarMenuButton asChild>
                       <Link

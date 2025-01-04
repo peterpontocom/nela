@@ -5,6 +5,16 @@ import { AuthLayout } from "./pages/_layout/auth";
 import { SignIn } from "./pages/auth/sign-in";
 import { SignUp } from "./pages/auth/sign-up";
 import { NelaCard } from "./pages/app/nela-card";
+import { Favorite } from "./pages/app/favorite";
+import { Store } from "./pages/app/store";
+import {
+  Home as HomeIcon,
+  CreditCard,
+  Star,
+  Store as StoreIcon,
+  Settings,
+} from "lucide-react";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -21,6 +31,14 @@ export const router = createBrowserRouter([
       {
         path: "/nela-card",
         element: <NelaCard />,
+      },
+      {
+        path: "/favorites",
+        element: <Favorite />,
+      },
+      {
+        path: "/store",
+        element: <Store />,
       },
     ],
   },
@@ -39,3 +57,31 @@ export const router = createBrowserRouter([
     ],
   },
 ]);
+
+export const NavItems = [
+  {
+    title: "Home",
+    url: "/",
+    icon: HomeIcon,
+  },
+  {
+    title: "Cartão",
+    url: "/nela-card",
+    icon: CreditCard,
+  },
+  {
+    title: "Favoritos",
+    url: "/favorites",
+    icon: Star,
+  },
+  {
+    title: "Loja",
+    url: "/store",
+    icon: StoreIcon,
+  },
+  {
+    title: "Configurações",
+    url: "/settings",
+    icon: Settings,
+  },
+];
