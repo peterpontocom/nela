@@ -4,7 +4,7 @@ import { AppLayout } from "./pages/_layout/app";
 import { AuthLayout } from "./pages/_layout/auth";
 import { SignIn } from "./pages/auth/sign-in";
 import { SignUp } from "./pages/auth/sign-up";
-
+import { NelaCard } from "./pages/app/nela-card";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -17,6 +17,10 @@ export const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home />,
+      },
+      {
+        path: "/nela-card",
+        element: <NelaCard />,
       },
     ],
   },

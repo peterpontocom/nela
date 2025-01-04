@@ -23,7 +23,7 @@ const items = [
   },
   {
     title: "Cartão",
-    url: "/card",
+    url: "/nela-card",
     icon: CreditCard,
   },
   {

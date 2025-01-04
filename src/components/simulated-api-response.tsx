@@ -96,3 +96,32 @@ export const simulatedApiResponse = [
     },
   },
 ];
+
+export const mockFavorites = [
+  {
+    profile: {
+      avatar: "https://via.placeholder.com/40",
+      username: "user1",
+      isFollowing: true,
+    },
+    product: {
+      image: "https://via.placeholder.com/150",
+      name: "Produto 1",
+      price: 1200,
+      isFavorite: true,
+    },
+  },
+  {
+    profile: {
+      avatar: "https://via.placeholder.com/40",
+      username: "user2",
+      isFollowing: false,
+    },
+    product: {
+      image: "https://via.placeholder.com/150",
+      name: "Produto 2",
+      price: 2500,
+      isFavorite: true,
+    },
+  },
+];

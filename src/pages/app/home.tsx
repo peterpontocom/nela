@@ -1,4 +1,3 @@
-import { Header } from "@/components/mobile/header";
 import { Helmet } from "react-helmet-async";
 import { useState, useEffect } from "react";
 import { CardProduct } from "@/components/card-product";
@@ -52,7 +51,7 @@ export function Home() {
   return (
     <div className="mb-24 w-full">
       <Helmet title="Home" />
-      <Header />
+
       <div className="mt-16 md:mt-0 lg:mt-0">
         <SearchFilter onSearch={handleSearch} />
       </div>
