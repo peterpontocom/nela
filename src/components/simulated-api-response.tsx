@@ -28,7 +28,7 @@ export const simulatedApiResponse = [
       name: "Bolo no pote",
       price: 2500,
       isFavorite: true,
-      category: ["Bebidas"],
+      category: ["Doces"],
     },
   },
   {
@@ -60,7 +60,7 @@ export const simulatedApiResponse = [
       name: "Bolo no pote",
       price: 2500,
       isFavorite: true,
-      category: ["Bebidas", "Crocantes"],
+      category: ["Doces"],
     },
   },
   {
