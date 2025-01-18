@@ -2,8 +2,10 @@ export const simulatedApiResponse = [
   {
     id: 1,
     profile: {
-      avatar: "https://avatar.iran.liara.run/public",
-      username: "peterpontocom",
+      avatar:
+        "https://img-kariyer.mncdn.com/mnresize/150/150/UploadFiles/Clients/SquareLogo/325/7325_257205.jpg",
+      storename: "Nela",
+      storeId: "nela",
       isFollowing: false,
     },
     product: {
@@ -18,8 +20,10 @@ export const simulatedApiResponse = [
   {
     id: 2,
     profile: {
-      avatar: "https://avatar.iran.liara.run/public",
-      username: "jacintofrancisco",
+      avatar:
+        "https://img-kariyer.mncdn.com/mnresize/150/150/UploadFiles/Clients/SquareLogo/325/7325_257205.jpg",
+      storename: "Nela",
+      storeId: "nela",
       isFollowing: true,
     },
     product: {
@@ -34,8 +38,10 @@ export const simulatedApiResponse = [
   {
     id: 3,
     profile: {
-      avatar: "https://avatar.iran.liara.run/public",
-      username: "luntalamaria",
+      avatar:
+        "https://img-kariyer.mncdn.com/mnresize/150/150/UploadFiles/Clients/SquareLogo/325/7325_257205.jpg",
+      storename: "Nela",
+      storeId: "nela",
       isFollowing: true,
     },
     product: {
@@ -50,8 +56,10 @@ export const simulatedApiResponse = [
   {
     id: 4,
     profile: {
-      avatar: "https://avatar.iran.liara.run/public",
-      username: "carlafernandes",
+      avatar:
+        "https://img-kariyer.mncdn.com/mnresize/150/150/UploadFiles/Clients/SquareLogo/325/7325_257205.jpg",
+      storename: "Nela",
+      storeId: "nela",
       isFollowing: true,
     },
     product: {
@@ -66,8 +74,10 @@ export const simulatedApiResponse = [
   {
     id: 5,
     profile: {
-      avatar: "https://avatar.iran.liara.run/public",
-      username: "carlacunha",
+      avatar:
+        "https://img-kariyer.mncdn.com/mnresize/150/150/UploadFiles/Clients/SquareLogo/325/7325_257205.jpg",
+      storename: "Nela",
+      storeId: "nela",
       isFollowing: true,
     },
     product: {
@@ -82,8 +92,10 @@ export const simulatedApiResponse = [
   {
     id: 6,
     profile: {
-      avatar: "https://avatar.iran.liara.run/public",
-      username: "peterpontocom",
+      avatar:
+        "https://img-kariyer.mncdn.com/mnresize/150/150/UploadFiles/Clients/SquareLogo/325/7325_257205.jpg",
+      storename: "Nela",
+      storeId: "nela",
       isFollowing: true,
     },
     product: {
@@ -101,7 +113,8 @@ export const mockFavorites = [
   {
     profile: {
       avatar: "https://via.placeholder.com/40",
-      username: "user1",
+      storename: "Nela",
+      storeId: "nela",
       isFollowing: true,
     },
     product: {
@@ -114,7 +127,8 @@ export const mockFavorites = [
   {
     profile: {
       avatar: "https://via.placeholder.com/40",
-      username: "user2",
+      storename: "Nela",
+      storeId: "nela",
       isFollowing: false,
     },
     product: {

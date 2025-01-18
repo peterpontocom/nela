@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { BadgeCheck, Star } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader } from "./ui/card";
@@ -8,7 +8,8 @@ import { toast } from "sonner";
 interface CardProductProps {
   profile: {
     avatar: string;
-    username: string;
+    storename: string;
+    storeId: string;
     isFollowing: boolean;
   };
   product: {
@@ -26,7 +27,7 @@ export function CardProduct({ profile, product }: CardProductProps) {
   const handleFollow = () => {
     setIsFollowing((prev) => !prev);
     toast(
-      `Você ${isFollowing ? "deixou de seguir" : "está seguindo"} ${profile.username}`,
+      `Você ${isFollowing ? "deixou de seguir" : "está seguindo"} ${profile.storeId}`,
     );
   };
 
@@ -39,17 +40,16 @@ export function CardProduct({ profile, product }: CardProductProps) {
 
   return (
     <Card className="flex h-full flex-col">
-      {/* Tornando o card flexível e responsivo */}
       <CardHeader className="flex flex-row items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           <Avatar className="h-8 w-8 rounded-full">
             {" "}
-            {/* Avatar responsivo */}
             <AvatarFallback className="rounded-lg">CN</AvatarFallback>
             <AvatarImage src={profile.avatar} />
           </Avatar>
-          <span className="lg:xs max-w-[120px] truncate text-xs text-muted-foreground md:text-sm">
-            @{profile.username}
+          <span className="lg:xs flex max-w-[120px] items-center gap-1 truncate text-sm md:text-sm">
+            <span className="font-semibold">{profile.storename}</span>{" "}
+            <BadgeCheck fill="" className="size-4 fill-sky-400 text-white" />
           </span>
         </div>
         <div>
@@ -61,7 +61,6 @@ export function CardProduct({ profile, product }: CardProductProps) {
       <CardContent className="flex flex-1 flex-row">
         <div className="h-40 w-full md:h-48 lg:h-56">
           {" "}
-          {/* Tamanhos dinâmicos */}
           <img
             src={product.image}
             className="h-full w-full rounded-md object-cover"

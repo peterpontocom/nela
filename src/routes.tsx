@@ -12,8 +12,11 @@ import {
   CreditCard,
   Star,
   Store as StoreIcon,
-  Settings,
+  Settings as SettingsIcon,
 } from "lucide-react";
+import { Settings } from "./pages/app/settings";
+import { SettingsMenu } from "./pages/app/settings/menu";
+import { ThemeToggler } from "./pages/app/settings/theme";
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +42,20 @@ export const router = createBrowserRouter([
       {
         path: "/store",
         element: <Store />,
+      },
+      {
+        path: "/settings",
+        element: <Settings />,
+        children: [
+          {
+            path: "/settings",
+            element: <SettingsMenu />,
+          },
+          {
+            path: "/settings/accessibility",
+            element: <ThemeToggler />,
+          },
+        ],
       },
     ],
   },
@@ -82,6 +99,6 @@ export const NavItems = [
   {
     title: "Configurações",
     url: "/settings",
-    icon: Settings,
+    icon: SettingsIcon,
   },
 ];

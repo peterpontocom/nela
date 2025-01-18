@@ -11,7 +11,7 @@ export function NelaCard() {
     <div className="mt-16 md:mt-0 lg:mt-0">
       <Card>
         <CardHeader>
-          <h1 className="text-sm text-muted">Seu cartão Nela</h1>
+          <h1 className="text-sm text-muted-foreground">Seu cartão Nela</h1>
         </CardHeader>
         <CardContent>
           <div className="text-sm font-medium text-muted-foreground">
