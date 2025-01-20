@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import { Settings } from "./pages/app/settings";
 import { SettingsMenu } from "./pages/app/settings/menu";
-import { ThemeToggler } from "./pages/app/settings/accessibility";
+import { Accessibility } from "./pages/app/settings/accessibility";
 
 export const router = createBrowserRouter([
   {
@@ -53,7 +53,7 @@ export const router = createBrowserRouter([
           },
           {
             path: "/settings/accessibility",
-            element: <ThemeToggler />,
+            element: <Accessibility />,
           },
         ],
       },
