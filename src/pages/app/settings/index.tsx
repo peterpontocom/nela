@@ -4,7 +4,11 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 export function Settings() {
   const location = useLocation();
   function isMenuPage() {
-    return location.pathname === "/settings/accessibility";
+    return [
+      "/settings/accessibility",
+      "/settings/security",
+      "/settings/user-account",
+    ].includes(location.pathname);
   }
   return (
     <div className="flex flex-col gap-4">

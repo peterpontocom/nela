@@ -15,13 +15,13 @@ const settingsItems: settingsItemsProps[] = [
     icon: CircleUser,
     title: "Sua conta",
     description: "Nome, Celular, email...",
-    url: "",
+    url: "/settings/user-account",
   },
   {
     icon: KeyRound,
     title: "Segurança",
     description: "Palavra-passe, pin...",
-    url: "",
+    url: "/settings/security",
   },
   {
     icon: Palette,
