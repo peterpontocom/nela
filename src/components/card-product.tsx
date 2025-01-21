@@ -5,6 +5,11 @@ import { Card, CardContent, CardHeader } from "./ui/card";
 import { useState } from "react";
 import { toast } from "sonner";
 import { Link } from "react-router-dom";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 interface CardProductProps {
   profile: {
@@ -42,17 +47,42 @@ export function CardProduct({ profile, product }: CardProductProps) {
   return (
     <Card className="flex h-full flex-col">
       <CardHeader className="flex flex-row items-center justify-between gap-2">
-        <Link to={`/@${profile.storeId}`} className="flex items-center gap-2">
-          <Avatar className="h-8 w-8 rounded-full">
-            {" "}
-            <AvatarFallback className="rounded-lg">CN</AvatarFallback>
-            <AvatarImage src={profile.avatar} />
-          </Avatar>
-          <div className="lg:xs flex max-w-[120px] items-center gap-1 truncate text-sm md:text-sm">
-            <span className="font-semibold">{profile.storename}</span>{" "}
-            <BadgeCheck fill="" className="size-4 fill-sky-400 text-white" />
-          </div>
-        </Link>
+        <HoverCard>
+          <HoverCardTrigger>
+            <Link
+              to={`/@${profile.storeId}`}
+              className="flex items-center gap-2"
+            >
+              <Avatar className="h-8 w-8 rounded-full">
+                {" "}
+                <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                <AvatarImage src={profile.avatar} />
+              </Avatar>
+              <div className="lg:xs flex max-w-[120px] items-center gap-1 truncate text-sm md:text-sm">
+                <span className="font-semibold">{profile.storename}</span>{" "}
+                <BadgeCheck
+                  fill=""
+                  className="size-4 fill-sky-400 text-white"
+                />
+              </div>
+            </Link>
+          </HoverCardTrigger>
+          <HoverCardContent>
+            <div className="flex gap-2">
+              <Avatar className="h-8 w-8 rounded-full">
+                {" "}
+                <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                <AvatarImage src={profile.avatar} />
+              </Avatar>
+              <p>
+                Bem-vindo à nossa página de alimentos! Somos apaixonados por
+                comida e queremos compartilhar nossa paixão com você. Oferecemos
+                uma ampla variedade de alimentos, desde lanches rápidos até
+                refeições completas. 🍟🍔
+              </p>
+            </div>
+          </HoverCardContent>
+        </HoverCard>
         <div>
           <Button variant="outline" size="xs" onClick={handleFollow}>
             {isFollowing ? "Seguindo" : "Seguir"}
