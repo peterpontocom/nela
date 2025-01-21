@@ -19,6 +19,7 @@ import { SettingsMenu } from "./pages/app/settings/menu";
 import { Accessibility } from "./pages/app/settings/accessibility";
 import { Security } from "./pages/app/settings/security";
 import { UserAccount } from "./pages/app/settings/user-account";
+import { Profile } from "./pages/app/profile";
 
 export const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ export const router = createBrowserRouter([
             element: <UserAccount />,
           },
         ],
+      },
+      {
+        path: "/@nela",
+        element: <Profile />,
       },
     ],
   },

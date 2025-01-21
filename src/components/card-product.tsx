@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader } from "./ui/card";
 import { useState } from "react";
 import { toast } from "sonner";
+import { Link } from "react-router-dom";
 
 interface CardProductProps {
   profile: {
@@ -41,17 +42,17 @@ export function CardProduct({ profile, product }: CardProductProps) {
   return (
     <Card className="flex h-full flex-col">
       <CardHeader className="flex flex-row items-center justify-between gap-2">
-        <div className="flex items-center gap-2">
+        <Link to={`/@${profile.storeId}`} className="flex items-center gap-2">
           <Avatar className="h-8 w-8 rounded-full">
             {" "}
             <AvatarFallback className="rounded-lg">CN</AvatarFallback>
             <AvatarImage src={profile.avatar} />
           </Avatar>
-          <span className="lg:xs flex max-w-[120px] items-center gap-1 truncate text-sm md:text-sm">
+          <div className="lg:xs flex max-w-[120px] items-center gap-1 truncate text-sm md:text-sm">
             <span className="font-semibold">{profile.storename}</span>{" "}
             <BadgeCheck fill="" className="size-4 fill-sky-400 text-white" />
-          </span>
-        </div>
+          </div>
+        </Link>
         <div>
           <Button variant="outline" size="xs" onClick={handleFollow}>
             {isFollowing ? "Seguindo" : "Seguir"}
