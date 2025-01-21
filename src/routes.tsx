@@ -18,6 +18,7 @@ import { Settings } from "./pages/app/settings";
 import { SettingsMenu } from "./pages/app/settings/menu";
 import { Accessibility } from "./pages/app/settings/accessibility";
 import { Security } from "./pages/app/settings/security";
+import { UserAccount } from "./pages/app/settings/user-account";
 
 export const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ export const router = createBrowserRouter([
           {
             path: "/settings/security",
             element: <Security />,
+          },
+          {
+            path: "/settings/user-account",
+            element: <UserAccount />,
           },
         ],
       },
