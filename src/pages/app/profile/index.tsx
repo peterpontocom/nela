@@ -1,11 +1,8 @@
-import { CardProduct } from "@/components/card-product";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { AvatarImage } from "@radix-ui/react-avatar";
-import { Link } from "react-router-dom";
-import { simulatedApiResponse } from "@/components/simulated-api-response";
+import { Outlet } from "react-router-dom";
 
 export function Profile() {
-  const products = simulatedApiResponse;
   return (
     <>
       <header>
@@ -16,42 +13,27 @@ export function Profile() {
             className="h-full w-full object-cover"
           />
         </div>
-        <Avatar className="-mt-7 ml-4 size-16">
-          <AvatarImage src="https://github.com/peterpontocom.png" />
-          <AvatarFallback>PP</AvatarFallback>
-        </Avatar>
-        <p className="mt-2 text-sm">
+        <div className="-mt-7 ml-4 flex w-max flex-col justify-center gap-2 text-center">
+          <Avatar className="size-16">
+            <AvatarImage src="https://github.com/peterpontocom.png" />
+            <AvatarFallback>PP</AvatarFallback>
+          </Avatar>
+          <span className="font-bold">Nela</span>
+        </div>
+        <p className="mt-4 text-sm">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum,
           aspernatur! Itaque culpa illo expedita aperiam cum quam fugit
           perspiciatis ipsam explicabo tenetur soluta eligendi harum, odio ullam
           quibusdam voluptatum beatae.
         </p>
-        <nav className="mt-8">
-          <ul className="flex gap-5">
-            <li>
-              <Link
-                to={""}
-                className="border-b-2 border-primary py-4 font-semibold text-primary"
-              >
-                Produtos
-              </Link>
-            </li>
-            <li>
-              <Link to={""}>Publicações</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main className="mt-8">
-        <div className="grid grid-cols-2 gap-3">
-          {products.map((product) => (
-            <CardProduct
-              key={product.id}
-              product={product.product}
-              profile={product.profile}
-            />
-          ))}
+        <div className="mt-3 flex flex-col gap-1 text-xs text-muted-foreground">
+          <span>Contacto: (+244) 975 488 943</span>
+          <span>Email: nela@gmail.com</span>
         </div>
+      </header>
+      <main className="mt-4">
+        <h1 className="py-4 font-semibold text-primary">Produtos</h1>
+        <Outlet />
       </main>
     </>
   );

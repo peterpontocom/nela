@@ -20,6 +20,7 @@ import { Accessibility } from "./pages/app/settings/accessibility";
 import { Security } from "./pages/app/settings/security";
 import { UserAccount } from "./pages/app/settings/user-account";
 import { Profile } from "./pages/app/profile";
+import { ProfileProducts } from "./pages/app/profile/products";
 
 export const router = createBrowserRouter([
   {
@@ -71,6 +72,16 @@ export const router = createBrowserRouter([
       {
         path: "/@nela",
         element: <Profile />,
+        children: [
+          {
+            path: "/@nela",
+            element: <ProfileProducts />,
+          },
+          {
+            path: "/@nela/store-products",
+            element: <ProfileProducts />,
+          },
+        ],
       },
     ],
   },
