@@ -1,5 +1,6 @@
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { AvatarImage } from "@radix-ui/react-avatar";
+import { BadgeCheck } from "lucide-react";
 import { Outlet } from "react-router-dom";
 
 export function Profile() {
@@ -15,16 +16,19 @@ export function Profile() {
         </div>
         <div className="-mt-7 ml-4 flex w-max flex-col justify-center gap-2 text-center">
           <Avatar className="size-16">
-            <AvatarImage src="https://github.com/peterpontocom.png" />
+            <AvatarImage src="https://img-kariyer.mncdn.com/mnresize/150/150/UploadFiles/Clients/SquareLogo/325/7325_257205.jpg" />
             <AvatarFallback>PP</AvatarFallback>
           </Avatar>
-          <span className="font-bold">Nela</span>
+          <div className="flex items-center gap-1 self-center text-sm">
+            <span className="font-bold">Nela</span>
+            <BadgeCheck fill="" className="size-4 fill-sky-400 text-white" />
+          </div>
         </div>
         <p className="mt-4 text-sm">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum,
-          aspernatur! Itaque culpa illo expedita aperiam cum quam fugit
-          perspiciatis ipsam explicabo tenetur soluta eligendi harum, odio ullam
-          quibusdam voluptatum beatae.
+          Bem-vindo à nossa página de alimentos! Somos apaixonados por comida e
+          queremos compartilhar nossa paixão com você. Oferecemos uma ampla
+          variedade de alimentos, desde lanches rápidos até refeições completas.
+          🍟🍔
         </p>
         <div className="mt-3 flex flex-col gap-1 text-xs text-muted-foreground">
           <span>Contacto: (+244) 975 488 943</span>
